@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  ::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+  }
+    body{
+      color: white;
+      animation-name: bgColorChange;
+      animation-iteration-count: infinite;
+      animation-duration: 5s;
+    }
+    @keyframes bgColorChange{
+      0%{
+        background: red;
+      }
+      10%{
+        background: cyan;
+      }
+      15%{
+        background: blue;
+      }
+      20%{
+        background: black;
+      }
+      25%{
+        background: green;
+      }
+      30%{
+        background: lime;
+      }
+      35%{
+        background: lightgreen;
+      }
+      40%{
+        background: purple;
+      }
+      45%{
+        background: violet;
+      }
+    }
+    h1{
+      font-family: sans-serif;
+      position: relative;
+      top: 10pc;
+      left: 12px;
+    }
+    h2{
+      font-size: 40px;
+      font-family: sans-serif;
+      font-weight: lighter;
+      position: relative;
+      top: 8pc;
+      left: 27pc;
+    }
+  </style>
+  <title>Disabled Contextmenu</title>
+</head>
+<body id="body">
+
+  <h1>Right Click In The Text, you will see the Contextmenu is disabled.</h1>
+  <h2>TRY IT!</h2>
+  
+  <script>
+    const div = document.getElementById("body");
+    div.addEventListener("contextmenu", (e) =>{
+      (e.preventDefault())
+    });
+  </script>
+</body>
+</html>
